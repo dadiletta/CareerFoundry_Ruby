@@ -1,3 +1,241 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* BODY & HEADER STYLES*/
+body{
+    font-family: Roboto, Futura, Helvetica, Arial, sans-serif;
+    position:relative;
+}
+
+.container h1 {
+    text-align:center;
+    margin-bottom:55px;
+}
+
+/* use to adjust scrolling effect*/
+.anchor{
+    padding-top:50px;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+/* CONTACT BANNER */
+
+#contact{
+	background-image: url('http://dadiletta.bitballoon.com/img/graphic-design.jpg');
+/*Add a background image*/
+	background-attachment: fixed;
+/*Give the background a fixed position does it not scroll when you scroll*/
+	background-size: cover;
+/*Have the background cover the entire div section*/
+	padding:100px;
+	padding-top: 50px;
+	min-height: 400px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+#contact h1, #contact p{
+    background:rgba(255,255,255,0.9);
+    padding:10px;
+}
+
+/* HERO IMAGES */
+
+#carousel-example-generic{
+    width:100%;
+    position:relative;
+}
+
+#carousel-example-generic h3 {
+    margin-bottom:20%;   
+}
+
+
+/* NAVIGATION */
+.navbar {
+    z-index: 900;
+    width:100%;
+    position:fixed;
+    height:60px;
+    background:rgba(63,1,0,0.7) !important;
+    margin-bottom:10px;
+    text-align: center;
+    padding:20px 10px 20px;
+    
+}
+.navbar ul.nav{
+    list-style:none;
+    float:right;
+    margin-top:0px;
+}
+
+.navbar ul.nav li{
+    float:left;
+    margin-top:0px;
+
+}
+.navbar li a{
+    margin:15px;
+    left:40%;
+    font-weight:900;
+    color:#B3A8A6;
+    text-transform:uppercase;
+    transition:color 500ms;
+    -webkit-transition:color 500ms;
+    margin-top:-15px;
+    
+}
+.navbar li a:hover{
+    text-decoration: none;
+    color:#707070;
+       
+}
+
+.navbar li.active a{
+    background:none !important;   
+}
+
+.projectName{
+    float:left;
+    text-transform: uppercase;
+    cursor:default;
+}
+
+button.navbar-toggle {
+  margin-top: -5px;
+  margin-right: 75px;
+}
+
+/* FOOTER */
+
+footer{
+    background: rgb(63,1,0);
+    height:60px;
+    margin-top:15px;
+    padding:20px 20px 20px 20px;
+    color:#fff;
+}
+
+.social {
+    float:right;
+    margin-top:-25px;
+}
+
+.social a{
+    color:#fff;
+}
+
+.twitter-follow-button{
+   float:right;
+}
+
+/* FORMS */
+
+.form-control{
+    margin: 0 auto;
+}
+
+.form-group label{
+    margin-top:10px;   
+}
+
+/* RESPONSIVE */
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+#carousel-example-generic h1 {
+    font-size:120px;   
+}
+#carousel-example-generic h3  {
+    font-size:55px;   
+}
+}
+@media (max-width: 768px) { 
+    div.navbar li a {
+        left:auto;
+    }
+    
+    div.navbar ul.nav {
+        margin-right:20px;
+        margin-top:0px;
+        
+    }
+    ul.nav li{ 
+        float:none !important;
+    }
+    ul.nav.navbar-nav {
+        background: rgba(63,1,0,0.7);
+        padding-top:10px;
+}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    #carousel-example-generic{ 
+        padding-top:50px;
+} }
+
+/* EFFECTS */
+.dramatic{
+    line-height:50px;
+    font-weight:500;
+    margin:30px;
+}
+.dramatic a:hover{
+    font-weight:900;
+    color:#ff0000;
+    text-decoration: underline;
+}
+
+#resume {
+    height:500px;
+}
+    
+#story {
+    overflow: hidden;
+}
+
+/*TABLE */
+td, th {
+    padding:5px;
+    text-align: center;
+}
+th{
+    text-decoration: underline;
+}
+table{
+    margin-bottom:15px !important;   
+}
+
+/* PROJECTS */
+
+.image {
+    box-sizing:border-box;
+    border:2px solid pink;
+    width:384px;
+    height:245px;
+    margin:5px;
+    display:inline-block;
+    position:relative;
+    background-size:contain;
+}
+.info {
+    display:inline-block;
+    color:#fff;
+    font-family:Futura;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.5em;
+    line-height:1.6;
+    position:absolute;
+    top:15%;
+    left:22%;
+    text-shadow: 1px 1px #000;
+}
+.proj-title {
+    font-weight:100;
+    text-shadow: 1px 1px #000;
+}

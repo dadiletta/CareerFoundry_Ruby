@@ -2,12 +2,46 @@
 <html>
 <head>
   <title>JoeRox</title>
+  <!-- CDN INCLUDES -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>  
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="http://www.aresdevelopment.net/wp-content/uploads/2015/03/ADM-spearTIP-ONLY2.ico" type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  
+  <!--INTERNAL STYLES-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!--- NAV BAR -->    
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="projectName">
+            Dan Adiletta
+         </div>
+         <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+             </div>
+            <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#story">Story</a></li> 
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav> <!---closes navbar-->
 <%= yield %>
 
 </body>

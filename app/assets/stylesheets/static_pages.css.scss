@@ -53,6 +53,9 @@ body{
     margin-bottom:20%;   
 }
 
+.carousel-inner>.item>img {
+  width:100%;
+}
 
 /* NAVIGATION */
 .navbar {
@@ -60,7 +63,7 @@ body{
     width:100%;
     position:fixed;
     height:60px;
-    background:rgba(63,1,0,0.7) !important;
+    background:rgba(63,1,0,0.9) !important;
     margin-bottom:10px;
     text-align: center;
     padding:20px 10px 20px;

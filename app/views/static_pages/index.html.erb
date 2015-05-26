@@ -9,7 +9,7 @@
         <div class="carousel-inner" role="listbox">
             <% @products.each do |product| %>
             <div class="item <%= "active" if product == @products.first %>">
-                <%= imgage_tag(product.image_url) %>
+                <%= image_tag(product.image_url) %>
                     <div class="carousel-caption">
                         <%= product.name %>
                     </div>
@@ -67,10 +67,7 @@
     <div class="container anchor" id="story">
         <h1>Bio</h1>
       <div class="row">
-        <div class="col-md-1">
-           
-        </div>  
-        <div class="col-md-8 col-md-offset-1">
+        <div class="col-md-8 col-md-offset-2">
             
 <p>Mr. Adiletta is a recognized leader and evangelist in Educational Technology. He is an outspoken advocate for technology’s potential to revolutionize student outcomes. He has an outstanding record of over 10 years as a classroom teacher, as an administrator, and as an IT solutions developer. In addition teaching, Mr. Adiletta is an accomplished web developer, designing, building, and supporting, sites for numerous local businesses with leading edge SaaS and WebRTC solutions. He and his wife serve the community as a volunteer mentor and hold positions on the steering committee of <a href="http://slowmoneyclevelandneo.org" target="_blank">a local nonprofit</a> that supports sustainable food businesses.</p>
 <br>
@@ -86,20 +83,7 @@
        </div>
       </div>
     </div>
-<!---WORK -->
-    <div class="container anchor center" id="work">
-        <h1>Available Services</h1>
-        <div class="row">
-            <div class="col-md-4 col-md-offset-2">
-                <div class="image" id="0"></div>
-                <div class="image" id="1"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="image" id="2"></div>
-                <div class="image" id="3"></div>
-            </div>
-        </div>
-    </div> <!--close container-->
+
 <!---CONTACT -->
     <div class="container anchor" id="contact">
         <div class="row">
@@ -126,33 +110,7 @@
 <!---FAQ -->
     <div class="container" id="faq">
         <h1>FAQ</h1>
-        <table class="center table table-bordered">
-            <tr class="my-row">
-                <th><h5>Skill</h5></th>
-                <th><h5>Years' Experience</h5></th>
-                <th><h5>Type of Training</h5></th>
-            </tr>
-            <tr class="my-row">
-                <td>Teaching</td>
-                <td>9</td>
-                <td>Formal &amp; Professional</td>
-            </tr>
-            <tr class="my-row">
-                <td>.NET Development</td>
-                <td>3</td>
-                <td>Informal</td>
-            </tr>
-            <tr class="my-row">
-                <td>Web Design</td>
-                <td>15</td>
-                <td>Informal &amp; Professional</td>
-            </tr>
-            <tr class="my-row">
-                <td>Ruby Development</td>
-                <td>Less than 1</td>
-                <td>CareerFoundry</td>
-            </tr>
-        </table>
+
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">

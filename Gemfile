@@ -1,5 +1,8 @@
 source 'http://rubygems.org'
 
+#User management
+gem 'devise'
+gem 'devise_security_extension'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'

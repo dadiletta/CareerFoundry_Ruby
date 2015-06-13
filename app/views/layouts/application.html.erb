@@ -37,11 +37,24 @@
                     <li><%= link_to "Home", root_path %></li>
                      <li><%= link_to "Lessons", products_path %></li> 
                     <li><%= link_to "Contact", root_path(:anchor => "contact") %></li>
+                     <% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
                 </ul>
             </div>
         </div>
     </nav> <!---closes navbar-->
 <div class="wrapper">
+    <div style="position:aboslute; left: 50%; bottom:5px;">
+    <%= notice %>
+    <%= alert %>
+    </div>
     <%= yield %>
 </div>
 

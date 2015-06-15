@@ -3,10 +3,10 @@
 </div>
 <%= form_tag("/products", method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+  <%= text_field_tag :q %>
+  <%= submit_tag("Search", :class => 'btn-primary') %>
 <% end %>
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>

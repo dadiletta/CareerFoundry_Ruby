@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.create(name: 'WordPress for Teachers', description: 'Learn how you can organize your classroom with an easy, interactive website', image_url: 'images/wordpress.jpg', price: 99)

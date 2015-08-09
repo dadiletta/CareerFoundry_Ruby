@@ -1,21 +1,22 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
-
+  before_filter :authenticate_user!
   # GET /products
   # GET /products.json
   def index
     if params[:q]
-      search_term = params[:q]
-      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    search_term = params[:q]
+    @products = Product.where("name LIKE ?", "%#{search_term}%")
     else
-      @products = Product.all
+    @products = Product.all
     end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.all.order("created_at DESC")
+    #@comments = Comment.where(:product_id => @product.id).paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /products/new
@@ -31,7 +32,6 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -60,7 +60,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    @product.destroy
+    @product.destroy 
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
@@ -75,6 +75,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-        params.require(:product).permit(:name, :description, :image_url, :price)
+      params.require(:product).permit(:name, :description, :image_url, :color, :price)
     end
 end

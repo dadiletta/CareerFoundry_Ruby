@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'will_paginate'
+
 #User management
 gem 'devise'
 gem 'devise_security_extension'

@@ -30,7 +30,7 @@
     <h2>Comments:</h2>
     <%= render @product.comments.build %>
 
-
+    <div class="pagination"><%= will_paginate @comments %></div>
 
     <h2>Add a Review:</h2>
     <%= render 'comments/form' %>

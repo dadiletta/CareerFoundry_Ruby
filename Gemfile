@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'will_paginate'
 
+
+
 #User management
 gem 'devise'
 gem 'devise_security_extension'
@@ -14,10 +16,12 @@ gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
     gem 'sqlite3'
+    gem 'rspec-rails', '~> 3.0'
 end
 # Use Postgress in production
 group :production do
     gem 'pg'
+    gem 'rspec-rails', '~> 3.0'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

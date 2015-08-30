@@ -6,5 +6,6 @@ $(document).on('ready page:load', function(){
 	    return $(this).attr('data-score');
 	  }
 	});
-    $('#myModal').modal('show');
+    $("#myModal").modal('show');
+    console.log(5 + 6);
 });

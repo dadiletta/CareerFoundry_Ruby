@@ -29,13 +29,8 @@
     <div class="container anchor">
       <div class="row">
         <div class="col-md-4">
-          <h2>Skills</h2>
-          <ul><li>Content marketing</li>
-            <li>Tasteful HTML/CSS</li>
-              <li>Project management</li>
-              <li>Educational marketplace strategies</li>
-              <li>Professional development</li>
-            </ul>
+          <h2>About This Site</h2>
+          <p>This is an example project demonstrating a growing capacity in Ruby on Rails. Your feedback would be greatly appreciated. Whether or not you're involved in CareerFoundry lessons, please send your thoughts and suggestions through the contact form below. Thanks!</p>
         </div>
         <div class="col-md-4">
             <div class="center" style="width:50%"><img class="center" src="http://www.aresdevelopment.net/wp-content/uploads/2014/10/dadiletta_photo.jpg" width="100%"></div> 
@@ -63,48 +58,33 @@
                 </div>
               </div>
             </div>
-<!---STORY -->
-    <div class="container anchor" id="story">
-        <h1>Bio</h1>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            
-<p>Mr. Adiletta is a recognized leader and evangelist in Educational Technology. He is an outspoken advocate for technology’s potential to revolutionize student outcomes. He has an outstanding record of over 10 years as a classroom teacher, as an administrator, and as an IT solutions developer. In addition teaching, Mr. Adiletta is an accomplished web developer, designing, building, and supporting, sites for numerous local businesses with leading edge SaaS and WebRTC solutions. He and his wife serve the community as a volunteer mentor and hold positions on the steering committee of <a href="http://slowmoneyclevelandneo.org" target="_blank">a local nonprofit</a> that supports sustainable food businesses.</p>
-<br>
-<p>Mr. Adiletta served the Director of Implementation at <a href="http://edstart.com" target="_blank">EdStart</a>, leading the deployment and training of <a href="http://exitticket.org" target="_blank">ExitTicket</a>, a cloud-based assessment system with longitudinal, mastery-based reporting. ExitTicket is unique in how it stores student comprehension data and Mr. Adiletta has been instrumental in making comprehension analytics more accessible to teachers. In this role, Mr. Adiletta has specialized in helping school systems adopt ground-breaking software for real-time data aggregation and analysis of student comprehension into easy-to-grasp displays that can inform teachers' decisions and has led to more successful 1:1 programs.</p>   
-<br>
-<p>Mr. Adiletta is also the founder of <a href="http://certifiededtech.org" target="_blank">Certified Edtech Strategist</a>, a free professional development platform teachers use to take courses on educational technology. Upon completion of such a course, teachers earn an OpenBadge Compliant certificate recognizing their proficiency of the educational technology. Mr. Adiletta has negotiated with major school districts to recognize these badges as increments of teachers’ required PD seat time. Mr. Adiletta continues to bring together independent software developers to build instructional courses on CEC‘s site. </p>
-<br>            
-<p>From 2010 to 2013, Mr. Adiletta held the post of Manager of Educational Technology, as well as Computer Science teacher at a private Catholic high school, <a href="http://marianapolis.org" target="_blank">Marianapolis</a>. Mr. Adiletta was solely responsible for the planning, training, and deployment of over 440 iPads. Mr. Adiletta evaluated and oversaw the installation of networking and software to securely and reliably support the entire school system. He employed a novel, flipped approach to the program’s professional development. He was also responsible for the inventory, repair, and security for all the devices. He negotiated prices between mobile device management (MDM) solutions like JAMF’s Casper Suite and AirWatch’s MDM, two examples of critical components to manage 1:1 infrastructure. He created a student club, TechCrew, which served as the first line of technical support for students, dramatically easing the burden on the IT staff. Mr. Adiletta was asked to present with his students about TechCrew at Tech &amp; Learning’s Tech Forum Boston.</p> 
-<br>
-<p>Mr. Adiletta’s passion for helping those most in need of advanced educational support has led him through the rigorous screening and training at The New Teacher Project to teach in distressed areas in Oakland, CA. He has sought to overcome cultural barriers and broaden his perspectives by teaching English as a Second Language in South Korea. He has worked in charter schools in Cleveland as well as a Museum Educator for the <a href="http://wrhs.org" target="_blank">Western Reserve Historical Society</a>.</p>
-<br>
-<p>Mr. Adiletta earned a BA in Teacher Education and History from Case Western Reserve University in Cleveland, OH and a Master's in Public Administration from Golden Gate University in San Francisco, CA.</p> 
-       </div>
-      </div>
-    </div>
 
 <!---CONTACT -->
     <div class="container anchor" id="contact">
         <div class="row">
             <h1 class="center" style="width:40%">Contact</h1>
         </div>
+        <%= form_tag("/static_pages/thank_you") do %>
     <div class="row">
         <form><div class="form-group">
-        <div class="col-lg-4 col-lg-offset-2  col-md-6">
-                <label for="name">Name*</label>
-                <input type="text" placeholder="Your name" class="form-control" id="name" required="required" title="Who are you?">
-                <label for="email">Email*</label>
-                <input type="email" placeholder="Your email" class="form-control" id="email" required="required" title="How can I respond to you?">
+            <div class="col-lg-4 col-lg-offset-2  col-md-6">
+                <%= label_tag :name, "Name" %>
+                <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+                <%= label_tag :email, "Email Address" %>
+                <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
             </div>
-        <div class="col-md-6 col-lg-4">
-            <label for="message">Message*</label><label for="message" id="charcount"></label>
-            <textarea minlength=20 placeholder="Your message goes here" style="resize:none;" cols="40" rows="5" class="form-control" id="message" required="required" title="What do you have to say?"></textarea>
-        </div>
-            <div class="center" style="width:50px;"><button style="margin-top:15px" type="submit" class="btn btn-primary center" id="contactSubmit">Submit</button></div>
+            <div class="col-md-6 col-lg-4">
+                <%= label_tag :message, "Message" %>
+                <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+            </div>   
+            <div class="center" style="width:50px;">
+                <br><br>
+                <%= submit_tag "Send", class: "btn btn-primary center", style: "margin-top: 20px;" %>
+            </div>
         </div> 
         </form>    
     </div>
+        <% end %>
     </div>
 
 <!---FAQ -->
@@ -188,7 +168,7 @@
 <footer>
     <div class="footer">&copy; Dan Adiletta, 2015</div>
     <div class="social">
-        <a href="https://twitter.com/certifiededtech" class="twitter-follow-button" data-show-count="false">Follow @certifiededtech</a>
+        <a href="https://twitter.com/aresdevelopment" class="twitter-follow-button" data-show-count="false">Follow @aresdevelopment</a>
         <div class="fb-share-button" data-href="https://facebook.com/aresdevelopment" data-layout="button"></div>
     </div>
 </footer>

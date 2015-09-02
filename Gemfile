@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'will_paginate'
 
-gem 'factory_girl_rails'
+
 
 #User management
 gem 'devise'

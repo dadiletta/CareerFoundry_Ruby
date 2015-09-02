@@ -4,7 +4,7 @@ describe User do
 
 	context "User created" do
 
-        before {@user = User.create(first_name: "Joe", last_name: "Smith", email: "joe@smith.com", password: "zebra993")}
+        before {@user = FactoryGirl.build :user}
 
 		it "is a valid user" do
 			expect(@user).to be_valid

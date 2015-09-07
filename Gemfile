@@ -1,7 +1,10 @@
 source 'http://rubygems.org'
+#ruby 2.2 causes errors in capitalization in file paths
+ruby '2.1.2'
 
 gem 'will_paginate'
 
+#testing
 gem 'factory_girl_rails'
 
 #User management
@@ -13,6 +16,7 @@ gem 'cancancan'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
     gem 'sqlite3'
@@ -22,6 +26,7 @@ end
 group :production do
     gem 'pg'
 end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

@@ -12,8 +12,8 @@ describe StaticPagesController, :type => :controller do
     end
 
     it "should route root to home page" do
-        opts = { :controller => 'home', :action => 'index'}
-        assert_recognizes opts, '/'
+        zing = { :controller => 'static_pages', :action => 'index'}
+        assert_recognizes zing, '/'
     end
     #it "renders the index template" do
     #  get :root

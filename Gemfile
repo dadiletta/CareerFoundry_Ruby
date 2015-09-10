@@ -11,8 +11,6 @@ gem 'factory_girl_rails'
 gem 'devise'
 gem 'devise_security_extension'
 
-gem 'stripe'
-
 #authorization
 gem 'cancancan'
 
@@ -23,8 +21,6 @@ gem 'rails', '4.1.8'
 group :development, :test do
     gem 'sqlite3'
     gem 'rspec-rails', '~> 3.0'
-    gem 'guard' 
-    gem 'guard-spork'
 end
 # Use Postgress in production
 group :production do

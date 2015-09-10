@@ -11,6 +11,10 @@ describe StaticPagesController, :type => :controller do
       expect(response).to have_http_status(200)
     end
 
+    it "should route root to home page" do
+        opts = { :controller => 'home', :action => 'index'}
+        assert_recognizes opts, '/'
+    end
     #it "renders the index template" do
     #  get :root
     #  expect(response).to render_template("index")

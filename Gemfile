@@ -11,6 +11,8 @@ gem 'factory_girl_rails'
 gem 'devise'
 gem 'devise_security_extension'
 
+gem 'stripe'
+
 #authorization
 gem 'cancancan'
 

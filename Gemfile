@@ -6,15 +6,18 @@ gem 'will_paginate'
 
 #testing
 gem 'factory_girl_rails'
+gem 'byebug'
+
+#caching and performance
+gem 'dalli'
 
 #User management
 gem 'devise'
 gem 'devise_security_extension'
-
-gem 'stripe'
-
 #authorization
 gem 'cancancan'
+
+gem 'stripe'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -23,6 +26,7 @@ gem 'rails', '4.1.8'
 group :development, :test do
     gem 'sqlite3'
     gem 'rspec-rails', '~> 3.0'
+    gem "brakeman", :require => false
 end
 # Use Postgress in production
 group :production do
@@ -47,6 +51,8 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
+
+gem 'chosen-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

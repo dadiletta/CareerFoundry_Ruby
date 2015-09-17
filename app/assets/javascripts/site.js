@@ -1,11 +1,11 @@
 $(document).on('ready page:load', function(){
-	$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
-	$('.rated').raty({ path: '/assets', 
+    $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+    $('.rated').raty({ path: '/assets', 
 	  readOnly: true,
 	  score: function() {
 	    return $(this).attr('data-score');
 	  }
-	});
+                     });
     $("#myModal").modal('show');
-    console.log(5 + 6);
+    $(".chzn-select").chosen();
 });

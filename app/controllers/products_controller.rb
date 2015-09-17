@@ -17,6 +17,11 @@ class ProductsController < ApplicationController
   def show
     @comments = @product.comments.all.order("created_at DESC")
     @comments = Comment.where(:product_id => @product.id).paginate(:per_page => 5, :page => params[:page])
+    if stale?(last_modified: @product.updated_at.utc, etag: @product.cache_key)
+      respond_to do |wants|
+        # ... normal response processing
+      end
+    end
   end
 
   # GET /products/new

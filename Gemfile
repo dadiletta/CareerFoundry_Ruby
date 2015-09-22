@@ -10,6 +10,7 @@ gem 'byebug'
 
 #caching and performance
 gem 'dalli'
+gem 'redis-rails'
 
 #User management
 gem 'devise'

@@ -30,7 +30,8 @@
 <% end %>    
 <div class="form-group">
     <h2>Comments:</h2>
-    <%= render @product.comments.build %>
+    <%= render partial: 'comment', locals: {comments: @product.comments.build} %>
+    <%# render comments:@product.comments.build %>
 
     <div class="pagination"><%= will_paginate @comments %></div>
 

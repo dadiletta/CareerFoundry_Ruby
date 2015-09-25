@@ -18,4 +18,10 @@ class UserMailer < ApplicationMailer
          mail(:from => "noreply@aresdevelopment.net",
          			:to => "#{email}")
 	end
+    
+    def order_email(first_name, email)
+    	@first_name = first_name
+         mail(:from => "noreply@aresdevelopment.net",
+         			:to => "#{email}")
+	end
 end

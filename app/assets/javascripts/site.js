@@ -7,5 +7,4 @@ $(document).on('ready page:load', function(){
 	  }
                      });
     $("#myModal").modal('show');
-    $(".chzn-select").chosen();
 });

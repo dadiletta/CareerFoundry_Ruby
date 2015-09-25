@@ -15,6 +15,8 @@ class PaymentsController < ApplicationController
 			err = body[:error]
 			flash[:error] = "There was an error. Please try again. #{err[:message]} "
 		end
-        redirect_to product_path(product)
+        UserMailer.order_email(@first_name, @email).deliver
+        redirect_to products_path()
+    
 	end
 end
